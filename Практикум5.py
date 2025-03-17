@@ -1,10 +1,13 @@
 #1
 a = int(input())
-if a % 4 == 0:
+if a % 400 == 0:
+    print(366)
+elif a % 100 == 0:
+    print(365)
+elif a % 4 == 0:
     print(366)
 else:
     print(365)
-print('\n')
 
 #2
 import turtle as trt
