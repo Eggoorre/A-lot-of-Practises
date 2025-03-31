@@ -30,9 +30,12 @@ while True:
 
 
 #4
-number_range = int(input('Введите количество'
-                         ' натуральных чисел для суммы: '))
-print(round((number_range * (number_range + 1)) / 2))
+x = int(input())
+counter = 0
+for i in range(x):
+    counter += x
+    x -= 1
+print(counter)
 
 
 #5
