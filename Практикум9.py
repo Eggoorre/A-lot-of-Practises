@@ -1,4 +1,4 @@
-'''
+
 #1
 n, d, r = map(int, input().split(' '))
 print(l := ((n * 2 * r) + (2 * d)))
@@ -112,6 +112,6 @@ n = int(input())
 for i in range(0, n + 1):
     summ += i
 print(summ * 4)
-'''
+
 
 #10
