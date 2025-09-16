@@ -5,7 +5,7 @@ word = [y for y in len(answ_l) * '*']
 print('\n' * 25)
 print(hint)
 print(*word, sep='')
-for i in range(1, 10):
+for i in range(10):
     a = int(input(f'Буква или слово(0 - буква, 1 - слово)?'))
     if a == 0:
         letter = input()
@@ -22,3 +22,4 @@ for i in range(1, 10):
 
 else:
     print('Закончились ходы(')
+
