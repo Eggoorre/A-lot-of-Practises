@@ -4,13 +4,13 @@ nums_list = list(map(int,
 stop_counter = 0
 while stop_counter < 1:
     command = input(f'Введите команду: ')
-    if command[0] == 'R':
+    if command[0] == 'R' and command[1].isdigit():
         new_list = (nums_list[-int(command[1]):] +
                     nums_list[:-int(command[1])])
         print(new_list)
         stop_counter += 1
 
-    elif command[0] == 'L':
+    elif command[0] == 'L' and command[1].isdigit():
         new_list = (nums_list[int(command[1]):] +
                     nums_list[:int(command[1])])
         print(new_list)
