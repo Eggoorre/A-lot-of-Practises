@@ -5,6 +5,7 @@ def change_r(numbers_list: list[int], n: int) -> list[int]:
     :param n: number of shifts
     :return: numbers_list
     '''
+    n %= len(numbers_list)
     for _ in range(n):
         numbers_list = (numbers_list[-1:] + numbers_list[:-1])
     return numbers_list
@@ -17,6 +18,7 @@ def change_l(numbers_list: list[int], n: int) -> list[int]:
     :param n: number of shifts
     :return: numbers_list
     '''
+    n %= len(numbers_list)
     for _ in range(n):
         numbers_list = (numbers_list[1:] + numbers_list[:1])
     return numbers_list
