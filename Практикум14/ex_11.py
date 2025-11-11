@@ -5,7 +5,6 @@ def change_r(numbers_list, n):
     :param n:
     :return: numbers_list_new
     '''
-
     numbers_list_new = (numbers_list[-n:] +
                         numbers_list[:-n])
     return numbers_list_new
