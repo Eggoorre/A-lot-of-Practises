@@ -1,27 +1,12 @@
-def change_r(numbers_list, n):
-    numbers_list_new = (numbers_list[-n:] +
-                        numbers_list[:-n])
-    return numbers_list_new
+stop_counter = 0
+words_list = []
+while stop_counter < 1:
+    word = input().lower().strip(',.:-?!')
+    if word == '':
+        stop_counter += 1
+    else:
+        words_list.append(word)
 
-
-def change_l(numbers_list, n):
-    numbers_list_new = (numbers_list[n:] +
-                        numbers_list[:n])
-    return numbers_list_new
-
-
-nums_list = list(map(int,
-                     input(f'Введите набор чисел: ').split()))
-command = input(f'Введите команду: ')
-
-command_num_list = [x for x in command if x.isdigit()]
-command_num = int(''.join(command_num_list))
-
-if command[0] == 'R':
-    nums_list = change_r(nums_list, command_num)
-elif command[0] == 'L':
-    nums_list = change_l(nums_list, command_num)
-else:
-    print(f'Введите правильную команду')
-
-print(nums_list)
+new_list = sorted(words_list, key=lambda x: words_list.count(x), reverse=True)
+for word in new_list:
+    print(word)
