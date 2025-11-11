@@ -1,30 +1,30 @@
 def change_r(numbers_list: list[int], n: int) -> list[int]:
     '''
-    function shifting list elements to the right on n points
+    function shifting list elements to the right n times
     :param numbers_list: list which is being changed
     :param n: number of shifts
-    :return: numbers_list_new
+    :return: numbers_list
     '''
-    numbers_list_new = (numbers_list[-n:] +
-                        numbers_list[:-n])
-    return numbers_list_new
+    for _ in range(n):
+        numbers_list = (numbers_list[-1:] + numbers_list[:-1])
+    return numbers_list
 
 
 def change_l(numbers_list: list[int], n: int) -> list[int]:
     '''
-    function shifting list elements to the left on n points
+    function shifting list elements to the left n times
     :param numbers_list: list which is being changed
     :param n: number of shifts
-    :return: numbers_list_new
+    :return: numbers_list
     '''
-    numbers_list_new = (numbers_list[n:] +
-                        numbers_list[:n])
-    return numbers_list_new
+    for _ in range(n):
+        numbers_list = (numbers_list[1:] + numbers_list[:1])
+    return numbers_list
 
 
 def main_funct() -> None:
     '''
-    main function printing result of shifting list on n points
+    main function printing result of shifting list n times
     '''
     nums_list = list(map(int,
                          input(f'Введите набор чисел: ').split()))
