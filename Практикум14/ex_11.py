@@ -1,8 +1,8 @@
-def change_r(numbers_list, n):
+def change_r(numbers_list: list[int], n: int) -> list[int]:
     '''
     function shifting list elements to the right on n points
-    :param numbers_list:
-    :param n:
+    :param numbers_list: list which is being changed
+    :param n: number of shifts
     :return: numbers_list_new
     '''
     numbers_list_new = (numbers_list[-n:] +
@@ -10,11 +10,11 @@ def change_r(numbers_list, n):
     return numbers_list_new
 
 
-def change_l(numbers_list, n):
+def change_l(numbers_list: list[int], n: int) -> list[int]:
     '''
     function shifting list elements to the left on n points
-    :param numbers_list:
-    :param n:
+    :param numbers_list: list which is being changed
+    :param n: number of shifts
     :return: numbers_list_new
     '''
     numbers_list_new = (numbers_list[n:] +
@@ -22,7 +22,7 @@ def change_l(numbers_list, n):
     return numbers_list_new
 
 
-def main_funct():
+def main_funct() -> None:
     '''
     main function printing result of shifting list on n points
     '''
@@ -43,4 +43,5 @@ def main_funct():
     print(nums_list)
 
 
-main_funct()
+if __name__ == "__main__":
+    main_funct()
