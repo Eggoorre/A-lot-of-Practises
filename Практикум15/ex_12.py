@@ -1,4 +1,4 @@
-def ind_maxlist(a: list[int], x:int, index=0) -> int:
+def search(a: list[int], x:int, index=0) -> int:
     '''
     recursive function asking if x in a
     :param a: list
@@ -12,14 +12,14 @@ def ind_maxlist(a: list[int], x:int, index=0) -> int:
     if a[index] == x:
         return 1
 
-    return ind_maxlist(a, x, index + 1)
+    return search(a, x, index + 1)
 
 
 def main() -> None:
     num_list = list(map(int, input(f'Введите список'
                                    f' целых чисел: ').split()))
     num_x = int(input(f'Введите число которое ищите: '))
-    print(ind_maxlist(num_list, num_x))
+    print(search(num_list, num_x))
 
 
 if __name__ == '__main__':
