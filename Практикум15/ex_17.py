@@ -18,5 +18,6 @@ def main() -> None:
     number = int(input(f'Введите число: '))
     print(f'{function1(number)}')
 
+
 if __name__ == '__main__':
     main()
