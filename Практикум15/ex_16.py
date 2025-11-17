@@ -1,31 +1,25 @@
-def ten_to_n(x: int, n:int, bin_list=None):
+def ten_to_n(x: int, n:int) -> str:
     '''
     recursive function which is changing
     10 digit system into n digit system
     :param x:
     :param n: n digit system
-    :param bin_list: our answer
-    which will be reversed because of algorithm
-    :return: reversed bin_list
+    :return: x in base n in string format
     '''
-    if bin_list is None:
-        bin_list = []
+    digits = "0123456789ABCDEF"
 
-    if x == 0:
-        if not bin_list:
-            bin_list.append(0)
-        return bin_list[::-1]
+    if x < n:
+        return digits[x]
 
-    bin_list.append(x % n)
-    return ten_to_n(x // n, n, bin_list)
+    return ten_to_n(x // n, n) + digits[x % n]
 
 
 def main() -> None:
-    number = int(input(f'Введите число: '))
-    num_system = int(input(f'Введите систему исчисления: '))
-    bin_num_res = ten_to_n(number, num_system)
-    print(f'Число {number} в {num_system}-ричной системе будет числом:'
-          f' {'|'.join(map(str, bin_num_res))}')
+    number = int(input('Введите число: '))
+    num_system = int(input('Введите систему исчисления: '))
+
+    print(f'Число {number} в {num_system}-ричной системе: '
+          f'{ten_to_n(number, num_system)}')
 
 
 if __name__ == '__main__':
