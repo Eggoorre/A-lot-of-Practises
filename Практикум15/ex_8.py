@@ -1,8 +1,8 @@
 def fib(k: int) -> int:
     '''
     recursive function finding k element of fibonacci sequence
-    :param k:
-    :return:
+    :param k: element of sequence
+    :return: element
     '''
     if k == 1:
         return 1
