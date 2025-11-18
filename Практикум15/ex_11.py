@@ -8,7 +8,7 @@ def ind_maxlist(a: list[int], index=0, max_val=None, max_index=None) -> int:
     :return: max index of max element in list
     '''
     if index == len(a):
-        return max_index + 1
+        return max_index
 
     if max_val is None or a[index] > max_val:
         max_val = a[index]
@@ -25,3 +25,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
