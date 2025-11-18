@@ -1,4 +1,4 @@
-def numbers(x: int):
+def numbers(x: int) -> None:
     '''
     recursive function printing number
      from the end to the start
