@@ -10,7 +10,7 @@ def ten_to_bin(x: int, bin_list=None):
         bin_list = []
 
     if x == 0:
-        if not bin_list:
+        if bin_list == []:
             bin_list.append(0)
         return bin_list[::-1]
 
