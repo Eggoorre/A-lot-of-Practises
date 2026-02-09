@@ -9,7 +9,7 @@ def is_el_in() -> None:
     set_2 = set(input().split())
     set_2_int = set(int(x) for x in set_2)
 
-    set_betw = set(x for x in set_1_int if x in set_2_int)
+    set_betw = set_2_int & set_1_int
 
     num = int(input())
 
