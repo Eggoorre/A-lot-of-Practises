@@ -1,15 +1,23 @@
-def main() -> None:
-    curses_list = []
-    result = []
+def courses() -> None:
+    '''
+    function getting names of courses and printing len of courses set
+    :return: None
+    '''
+    courses_set = set()
     n = int(input(f'Введите число студентов: '))
-    for stud in range(n):
-        curses_list.append(input(f'Введите курсы выбранные'
-                                 f' {stud + 1}-ым студентом: ').split())
+    for student in range(n):
+        courses_list = input(f'Введите курсы {student + 1}-го студента: ').split()
+        for course in courses_list:
+            courses_set.add(course)
+    print(f'Количество выбранных курсов - {len(courses_set)}')
 
-    for el in curses_list:
-        result.extend(el)
 
-    print(f'{len(set(result))} курсов всего было выбрано')
+def main() -> None:
+    '''
+    main function
+    :return: None
+    '''
+    courses()
 
 
 if __name__ == "__main__":
