@@ -7,9 +7,9 @@ def num_check() -> None:
                                f' натуральных чисел: ').split()))
     num = int(input(f'Введите число для проверки: '))
     if num in set(nums):
-        print(f'Число есть в списке')
+        print(f'Число есть во множестве')
     else:
-        print(f'Числа нет в списке')
+        print(f'Числа нет во множестве')
 
 
 def main() -> None:
@@ -22,3 +22,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
