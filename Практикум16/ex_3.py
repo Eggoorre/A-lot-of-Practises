@@ -15,7 +15,7 @@ def sl_favs() -> None:
         for fav in friends_fav_list:
             friends_fav_set.add(fav)
 
-    sl_favs_ego = [x for x in sl_fav_set if x not in friends_fav_set]
+    sl_favs_ego = sl_fav_set - friends_fav_set
 
     print(f'Количество наименований продуктов,'
           f' нравящихся только Сладкоежкину: {len(sl_favs_ego)}')
