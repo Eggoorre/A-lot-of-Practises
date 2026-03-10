@@ -12,7 +12,10 @@ def create_words_pairs_list() -> list:
     return els_list
 
 def main() -> None:
-
+    '''
+    main function
+    :return: None
+    '''
     dict_els = dict(create_words_pairs_list())
     word_check = input().lower()
     for stat, el_list in dict_els.items():
@@ -26,3 +29,4 @@ def main() -> None:
 if __name__ == '__main__':
 
     main()
+
