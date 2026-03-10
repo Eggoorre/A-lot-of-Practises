@@ -1,6 +1,6 @@
 def create_words_pairs_list() -> list:
     '''
-    function getting rus and eng words and forming list from them
+    function getting rus and eng words and forming list of tuples from them
     :return: list[rus_word: eng_word]
     '''
     dict_list = []
@@ -27,3 +27,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
