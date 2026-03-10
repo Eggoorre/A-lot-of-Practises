@@ -1,6 +1,7 @@
 def create_words_pairs_list() -> list:
     '''
-    function getting antonims and forming list from them
+    function getting types of key and keys
+    and forming list of tuples from them
     :return: list
     '''
     els_list = []
@@ -23,4 +24,5 @@ def main() -> None:
 
 
 if __name__ == '__main__':
+
     main()
