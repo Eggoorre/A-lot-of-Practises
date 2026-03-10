@@ -1,7 +1,8 @@
 def count_family(tree: dict, name: str) -> int:
     '''
     recursive function counting amount of family members
-    :param tree:
+    :param tree: dict of family members, father - key,
+    child - item
     :param name: name of relative
     :return: num of relatives
     '''
@@ -37,3 +38,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
