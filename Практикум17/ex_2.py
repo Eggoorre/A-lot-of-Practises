@@ -11,7 +11,7 @@ def create_words_pairs_list() -> list:
     return dict_list
 
 
-def main():
+def main() -> None:
     '''
     main function
     :return:
@@ -27,4 +27,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
