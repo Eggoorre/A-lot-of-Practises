@@ -16,10 +16,10 @@ def count_family(tree: dict, name: str) -> int:
     return total
 
 
-def main():
+def main() -> None:
     '''
     main function
-    :return:
+    :return: None
     '''
     num = int(input())
     tree = {}
@@ -38,4 +38,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
