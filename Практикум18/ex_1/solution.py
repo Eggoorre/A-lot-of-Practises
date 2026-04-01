@@ -18,6 +18,13 @@ class Dog:
         '''
         self.name = name
 
+    def __str__(self) -> str:
+        '''
+        Method returning str name of dog
+        :return: dog name
+        '''
+        return self.name
+
     def say(self) -> None:
         '''
         Printing the sound Dog makes
