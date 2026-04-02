@@ -1,4 +1,3 @@
-from functools import wraps
 from datetime import datetime
 
 
@@ -8,14 +7,12 @@ def exceptions_log(func):
     :param func: function with arbitrary arguments
     :return: wrapped function
     '''
-    @wraps(func)
     def wrapper(*args, **kwargs):
         try:
             return func(*args, **kwargs)
         except Exception as e:
             with open('errors.log', 'a', encoding='utf-8') as f:
                 f.write(f'{datetime.now()} : {type(e).__name__}: {e}\n')
-            # function returns None if exception occurs
 
     return wrapper
 
