@@ -1,5 +1,4 @@
 import time
-from functools import wraps
 
 
 def time_try_restrict(time_limit: float, max_calls: int, period: float):
@@ -19,7 +18,6 @@ def time_try_restrict(time_limit: float, max_calls: int, period: float):
         '''
         call_times = []
 
-        @wraps(func)
         def wrapper(*args, **kwargs):
 
             now = time.time()
